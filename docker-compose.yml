@@ -10,7 +10,7 @@ services:
     depends_on:
       - postgres
       - redis
-      # - storage
+      - storage
 
   redis:
     image: redis
@@ -52,7 +52,7 @@ services:
       - "9000:9000"
     entrypoint: sh
     # command: -c 'minio server'
-    command: -c 'server /data --console-address ":9001"'
+    command: -c 'minio server /data --console-address ":9001"'
     deploy:
       restart_policy:
         condition: on-failure
@@ -72,7 +72,7 @@ services:
       - '443:443'
     links:
       - outline
-      # - storage
+      - storage
     restart: always
     volumes:
       - https-portal-data:/var/lib/https-portal
