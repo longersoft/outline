@@ -50,4 +50,5 @@ jobs:
         known_hosts: 'just-a-placeholder-so-we-dont-get-errors'
     - run: |
         ssh-keyscan -H 54.245.162.99 >> ~/.ssh/known_hosts
-        echo "deploy"
+        echo "run bash-script.sh on ec2 server"
+        echo "build new docker image with new tag and run it"
