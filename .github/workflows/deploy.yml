@@ -51,4 +51,3 @@ jobs:
       run: |
         ssh-keyscan -H 54.245.162.99 >> ~/.ssh/known_hosts
         echo "deploy"
-    - run: echo "Nofify"
