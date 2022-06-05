@@ -19,8 +19,8 @@ on:
     branches: [ feature/lvtest ]
 
 jobs:
-  deployment:
-    name: Deployment
+  analyze:
+    name: Analyze
     runs-on: ubuntu-latest
     permissions:
       actions: read
